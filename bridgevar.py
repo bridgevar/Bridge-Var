@@ -1,6 +1,10 @@
 import scratchapi
 from scratchapi import *
 scratch = scratchapi.ScratchUserSession('username', 'password')
+stop = 0
+
+def stopServer():
+   stop = 1
 
 def startServer():
     while True:
@@ -15,6 +19,8 @@ def startServer():
             ScratchUserSession.cloud.set_var('test', baseproject1, 115433205)
             ScratchUserSession.cloud.set_var('send', "0", 115433970)
             print("115433970 sent 115433205 " + baseproject1 + " succesfully!")
+        if (stop == 1):
+            break
     
 if (scratch.tools.verify_session() == True):
     startServer()
