@@ -1,3 +1,5 @@
 # Bridge-Var
 
-Requires Python 2 and Scratch API
+Requires Python 3 and Scratch API
+
+Backup code check out https://github.com/bridgevar/bridgevar-js!
